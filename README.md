@@ -1,7 +1,7 @@
 # RegistroApp
 
 Aplicación desarrollada en Ionic Framework convertida a Android usando Capacitor
-Por Ricardo Carrión
+Por Ricardo Carrión V.
 
 ## Cómo ejecutar el proyecto
 
