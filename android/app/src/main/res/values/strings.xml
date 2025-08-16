@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">RegistroApp</string>
+    <string name="title_activity_main">RegistroApp</string>
+    <string name="package_name">com.puce.registroapp</string>
+    <string name="custom_url_scheme">com.puce.registroapp</string>
+</resources>

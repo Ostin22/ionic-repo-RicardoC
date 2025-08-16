@@ -1,0 +1,338 @@
+.registro-content {
+  --background: #f8f9fa;
+}
+
+.registro-container {
+  padding: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card de usuario */
+.user-card {
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.logo-container {
+  flex-shrink: 0;
+}
+
+.logo-circle {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #4285f4, #34a853);
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-inner-circle {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.logo-dot {
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.user-details h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.user-details p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+/* Card de dígitos */
+.digitos-card {
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.digitos-card ion-card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.digito-box {
+  display: inline-block;
+  margin: 0 20px;
+  vertical-align: top;
+}
+
+.digito-label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.digito-input {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.digito-input:focus {
+  border-color: #4285f4;
+  box-shadow: 0 0 5px rgba(66, 133, 244, 0.3);
+}
+
+/* Ocultar las flechitas de incremento en inputs tipo number */
+.digito-input::-webkit-outer-spin-button,
+.digito-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.digito-input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.registro-button {
+  margin-top: 30px;
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  width: 200px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.registro-button:hover:not(:disabled) {
+  background-color: #218838;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.registro-button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Tabla de registros */
+.tabla-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-header {
+  margin-bottom: 15px;
+}
+
+.tabla-header h4 {
+  margin: 0;
+  color: #333;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.tabla-container {
+  overflow-x: auto;
+}
+
+.registros-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.registros-tabla th,
+.registros-tabla td {
+  padding: 12px 8px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.registros-tabla th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+  color: #333;
+}
+
+.registros-tabla td {
+  color: #666;
+}
+
+.registros-tabla tbody tr:hover {
+  background-color: #fafafa;
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  padding: 30px;
+}
+
+/* Estilos para filtros */
+.filtros-container {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #e3f2fd;
+}
+
+.filtros-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filtro-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filtro-btn {
+  padding: 8px 16px;
+  border: 2px solid #e3f2fd;
+  background: #ffffff;
+  color: #4285f4;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.filtro-btn:hover {
+  background: #e3f2fd;
+  transform: translateY(-1px);
+}
+
+.filtro-btn.active {
+  background: linear-gradient(135deg, #4285f4, #34a853);
+  color: #ffffff;
+  border-color: #4285f4;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .registro-container {
+    padding: 10px;
+  }
+  
+  .user-info {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .logo-circle {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .logo-inner-circle {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .digito-box {
+    margin: 0 15px;
+  }
+  
+  .digito-input {
+    width: 55px;
+    height: 55px;
+    font-size: 18px;
+  }
+  
+  .registro-button {
+    width: 180px;
+    height: 45px;
+    font-size: 14px;
+  }
+  
+  .registros-tabla {
+    font-size: 12px;
+  }
+  
+  .registros-tabla th,
+  .registros-tabla td {
+    padding: 8px 4px;
+  }
+  
+  /* Filtros responsive */
+  .filtros-container {
+    padding: 12px;
+  }
+  
+  .filtro-botones {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .digito-box {
+    margin: 0 10px;
+  }
+  
+  .digito-input {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+  
+  .registro-button {
+    width: 160px;
+    height: 42px;
+    font-size: 13px;
+  }
+  
+  .registros-tabla th,
+  .registros-tabla td {
+    padding: 6px 3px;
+    font-size: 11px;
+  }
+}
+
+/* Forzar tema claro */
+ion-card, ion-item, ion-input, ion-label, ion-button {
+  --background: #ffffff !important;
+  --color: #333333 !important;
+}

@@ -2,14 +2,15 @@
 http://ionicframework.com/docs/theming/ */
 
 /** Ionic CSS Variables **/
+/* Forzar tema claro siempre */
 :root {
   /** primary **/
-  --ion-color-primary: #3880ff;
-  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary: #4285f4;
+  --ion-color-primary-rgb: 66, 133, 244;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #3171e0;
-  --ion-color-primary-tint: #4c8dff;
+  --ion-color-primary-shade: #3b75d6;
+  --ion-color-primary-tint: #5596f5;
 
   /** secondary **/
   --ion-color-secondary: #3dc2ff;
@@ -28,12 +29,12 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-tertiary-tint: #6370ff;
 
   /** success **/
-  --ion-color-success: #2dd36f;
-  --ion-color-success-rgb: 45, 211, 111;
+  --ion-color-success: #34a853;
+  --ion-color-success-rgb: 52, 168, 83;
   --ion-color-success-contrast: #ffffff;
   --ion-color-success-contrast-rgb: 255, 255, 255;
-  --ion-color-success-shade: #28ba62;
-  --ion-color-success-tint: #42d77d;
+  --ion-color-success-shade: #2e9249;
+  --ion-color-success-tint: #48b464;
 
   /** warning **/
   --ion-color-warning: #ffc409;
@@ -232,5 +233,45 @@ http://ionicframework.com/docs/theming/ */
     --ion-tab-bar-background: #1f1f1f;
 
     --ion-card-background: #1e1e1e;
+  }
+}
+
+/* Forzar tema claro independientemente del modo oscuro del dispositivo */
+body {
+  --ion-background-color: #ffffff !important;
+  --ion-background-color-rgb: 255, 255, 255 !important;
+  --ion-text-color: #212529 !important;
+  --ion-text-color-rgb: 33, 37, 41 !important;
+  --ion-card-background: #ffffff !important;
+  --ion-toolbar-background: #ffffff !important;
+  --ion-tab-bar-background: #ffffff !important;
+}
+
+/* Anular media query de modo oscuro */
+@media (prefers-color-scheme: dark) {
+  body {
+    --ion-background-color: #ffffff !important;
+    --ion-background-color-rgb: 255, 255, 255 !important;
+    --ion-text-color: #212529 !important;
+    --ion-text-color-rgb: 33, 37, 41 !important;
+    --ion-card-background: #ffffff !important;
+    --ion-toolbar-background: #ffffff !important;
+    --ion-tab-bar-background: #ffffff !important;
+    
+    --ion-color-primary: #4285f4 !important;
+    --ion-color-primary-rgb: 66, 133, 244 !important;
+    --ion-color-success: #34a853 !important;
+    --ion-color-success-rgb: 52, 168, 83 !important;
+  }
+  
+  .ios body,
+  .md body {
+    --ion-background-color: #ffffff !important;
+    --ion-background-color-rgb: 255, 255, 255 !important;
+    --ion-text-color: #212529 !important;
+    --ion-text-color-rgb: 33, 37, 41 !important;
+    --ion-card-background: #ffffff !important;
+    --ion-toolbar-background: #ffffff !important;
+    --ion-tab-bar-background: #ffffff !important;
   }
 }
